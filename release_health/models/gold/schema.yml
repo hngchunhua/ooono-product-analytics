@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: fct_drive_health
+    columns:
+      - name: session_id
+        data_tests:
+          - unique
+          - not_null

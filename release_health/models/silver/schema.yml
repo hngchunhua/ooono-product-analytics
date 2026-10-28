@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: stg_drives
+    columns:
+      - name: session_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: platform
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['ios', 'android']
+
+      - name: connection_count
+        data_tests:
+          - not_null
+
+  - name: stg_warnings
+    columns:
+      - name: warning_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_users
+    columns:
+      - name: user_id
+        data_tests:
+          - unique
+          - not_null
+
+      - name: platform
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['ios', 'android']
